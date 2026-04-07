@@ -31,7 +31,6 @@ namespace BummashTestApplication
 
         public IActionResult Results([FromForm] InitialDetailModel detailModel)
         {
-
             DetailModel model = new DetailModel();
             DetailProbeModel probeModel = new DetailProbeModel();
 

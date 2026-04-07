@@ -1,42 +1,54 @@
-﻿
+﻿@model BummashTestApplication.InitialDetailModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
     ViewData["Title"] = "Ввод данных";
 }
 
 <h1>Деталь  - чистовые размеры и переменные</h1>
 
-<div class="text-center">
+<div>
     <form action="~/Detail/Results" method="post" enctype="application/json">
         <div>
             <label>D</label>
-            <input type="text" id="DiameterOuter" name="DiameterOuter" />
+            <input type="text" id="DiameterOuter" name="DiameterOuter" asp-for="DiameterOuter" />
+            <span asp-validation-for="DiameterOuter" />
         </div>
         <div>
             <label>d</label>
-            <input type="text" id="DiameterInner" name="DiameterInner" />
+            <input type="text" id="DiameterInner" name="DiameterInner" asp-for="DiameterInner" />
+            <span asp-validation-for="DiameterInner" />
         </div>
         <div>
             <label>H</label>
-            <input type="text" id="Height" name="Height" />
+            <input type="text" id="Height" name="Height" asp-for="Height" />
+            <span asp-validation-for="Height" />
         </div>
         <div>
             <label>x</label>
-            <input type="text" id="NumberOfDetails" name="NumberOfDetails" />
+            <input type="text" id="NumberOfDetails" name="NumberOfDetails" asp-for="NumberOfDetails" />
+            <span asp-validation-for="NumberOfDetails" />
         </div>
         <div>
             <label>y</label>
-            <input type="text" id="CutLength" name="CutLength" />
+            <input type="text" id="CutLength" name="CutLength"  asp-for="CutLength" />
+            <span asp-validation-for="CutLength" />
         </div>
         <div>
             <label>Q</label>
-            <input type="text" id="ProbingOverlap" name="ProbingOverlap" />
+            <input type="text" id="ProbingOverlap" name="ProbingOverlap" asp-for="ProbingOverlap" />
+            <span asp-validation-for="ProbingOverlap" />
         </div>
         <div>
             <label>Напуск на ТО</label>
-            <input type="text" id="ThermoOverlap" name="ThermoOverlap" />
+            <input type="text" id="ThermoOverlap" name="ThermoOverlap" asp-for="ThermoOverlap" />
+            <span asp-validation-for="ThermoOverlap" />
         </div>
 
         <input type="submit" value="Рассчитать" />
 
     </form>
 </div>
+
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.1.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.17.0/jquery.validate.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.validation.unobtrusive/3.2.10/jquery.validate.unobtrusive.min.js"></script>
