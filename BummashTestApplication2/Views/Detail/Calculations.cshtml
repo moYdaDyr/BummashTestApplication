@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewData["Title"] = "Ввод данных";
+}
+
+<h1>Деталь  - чистовые размеры и переменные</h1>
+
+<div class="text-center">
+    <form action="~/Detail/Results" method="post" enctype="application/json">
+        <div>
+            <label>D</label>
+            <input type="text" id="DiameterOuter" name="DiameterOuter" />
+        </div>
+        <div>
+            <label>d</label>
+            <input type="text" id="DiameterInner" name="DiameterInner" />
+        </div>
+        <div>
+            <label>H</label>
+            <input type="text" id="Height" name="Height" />
+        </div>
+        <div>
+            <label>x</label>
+            <input type="text" id="NumberOfDetails" name="NumberOfDetails" />
+        </div>
+        <div>
+            <label>y</label>
+            <input type="text" id="CutLength" name="CutLength" />
+        </div>
+        <div>
+            <label>Q</label>
+            <input type="text" id="ProbingOverlap" name="ProbingOverlap" />
+        </div>
+        <div>
+            <label>Напуск на ТО</label>
+            <input type="text" id="ThermoOverlap" name="ThermoOverlap" />
+        </div>
+
+        <input type="submit" value="Рассчитать" />
+
+    </form>
+</div>
