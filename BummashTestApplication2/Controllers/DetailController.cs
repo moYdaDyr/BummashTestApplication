@@ -40,29 +40,29 @@ namespace BummashTestApplication
 
             IResultDetailModel _resultDetailModel = new ResultDetailModel(model, probeModel);
 
-            ViewData["di"] = _resultDetailModel.DiameterInner;
+            ViewData["di"] = "⌀" + _resultDetailModel.DiameterInner;
             ViewData["di_"] = _resultDetailModel.DiameterInnerBlank + "±" + _resultDetailModel.DiameterInnerBlankDelta;
 
-            ViewData["do"] = _resultDetailModel.DiameterOuter;
+            ViewData["do"] = "⌀" + _resultDetailModel.DiameterOuter;
             ViewData["do_"] = _resultDetailModel.DiameterOuterBlank + "±" + _resultDetailModel.DiameterOuterBlankDelta;
 
             ViewData["H"] = _resultDetailModel.Height;
             ViewData["H_"] = _resultDetailModel.HeightBlank + "±" + _resultDetailModel.HeightBlankDelta;
 
-            ViewData["MassNominal"] = _resultDetailModel.MassNominal;
-            ViewData["MassMaximal"] = _resultDetailModel.MassMaximal;
+            ViewData["MassNominal"] = _resultDetailModel.MassNominal.ToString("f3");
+            ViewData["MassMaximal"] = _resultDetailModel.MassMaximal.ToString("f3");
 
-            ViewData["di2"] = _resultDetailModel.DiameterInnerProbe;
+            ViewData["di2"] = "⌀" + _resultDetailModel.DiameterInnerProbe;
             ViewData["di_2"] = _resultDetailModel.DiameterInnerBlankProbe + "±" + _resultDetailModel.DiameterInnerBlankDeltaProbe;
 
-            ViewData["do2"] = _resultDetailModel.DiameterOuterProbe;
+            ViewData["do2"] = "⌀" + _resultDetailModel.DiameterOuterProbe;
             ViewData["do_2"] = _resultDetailModel.DiameterOuterBlankProbe + "±" + _resultDetailModel.DiameterOuterBlankDeltaProbe;
 
             ViewData["H2"] = _resultDetailModel.HeightProbe;
             ViewData["H_2"] = _resultDetailModel.HeightBlankProbe + "±" + _resultDetailModel.HeightBlankDeltaProbe;
 
-            ViewData["MassNominal2"] = _resultDetailModel.MassNominalProbe;
-            ViewData["MassMaximal2"] = _resultDetailModel.MassMaximalProbe;
+            ViewData["MassNominal2"] = _resultDetailModel.MassNominalProbe.ToString("f3");
+            ViewData["MassMaximal2"] = _resultDetailModel.MassMaximalProbe.ToString("f3");
 
             return View();
         }
